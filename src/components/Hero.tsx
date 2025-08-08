@@ -25,6 +25,7 @@ export default function Hero() {
           imgAlt="Chicago Hendriks"
           imgWidth={1005}
           imgHeight={511}
+          lazy={false}
         />
       </div>
 

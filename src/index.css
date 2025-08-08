@@ -16,7 +16,7 @@
   }
 
   svg {
-    @apply block h-full w-full;
+    /* @apply block h-full w-full; */
   }
 }
 

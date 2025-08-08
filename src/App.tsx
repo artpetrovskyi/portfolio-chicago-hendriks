@@ -1,4 +1,7 @@
+import About from "./components/About";
 import Categories from "./components/Categories";
+import Clients from "./components/Clients";
+import Connect from "./components/Connect";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -13,6 +16,9 @@ function App() {
         <div className="space-y-60">
           <Categories />
           <Works />
+          <About />
+          <Clients />
+          <Connect />
         </div>
       </main>
       <Footer />

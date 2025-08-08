@@ -6,6 +6,7 @@ interface Props {
   imgWidth?: number;
   imgHeight?: number;
   tag?: keyof JSX.IntrinsicElements;
+  lazy?: boolean;
 }
 
 export default function SectionTopImage({
@@ -14,10 +15,11 @@ export default function SectionTopImage({
   imgWidth,
   imgHeight,
   tag: Wrapper = "h3",
+  lazy = true,
 }: Props) {
   return (
-    <Wrapper className="-mb-2.5">
-      <img src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} />
+    <Wrapper className="-mb-1.5">
+      <img src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} loading={lazy ? "lazy" : "eager"} />
     </Wrapper>
   );
 }

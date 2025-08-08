@@ -49,12 +49,12 @@ export default function Works() {
       {WORKS.map((work) => (
         <div
           key={work.title}
-          className="-mx-4 grid auto-rows-auto grid-cols-4 gap-0 bg-[var(--white)] text-[var(--black)] sm:mx-0"
+          className="-mx-4 grid auto-rows-auto grid-cols-4 gap-[1px] [&>div]:bg-[var(--white)] text-[var(--black)] sm:mx-0"
         >
-          <div className="col-span-4 col-start-1 row-span-1 row-start-1 p-4 text-xl sm:col-span-2 sm:border-r sm:p-7 lg:col-span-1 lg:border-r-0 lg:border-b">
+          <div className="col-span-4 col-start-1 row-span-1 row-start-1 p-4 text-xl sm:col-span-2  sm:p-7 lg:col-span-1 ">
             {work.title}
           </div>
-          <div className="col-span-4 col-start-1 row-span-1 row-start-2 flex items-end border-t p-4 text-2xl font-bold sm:col-span-2 sm:col-start-3 sm:row-start-1 sm:border-t-0 sm:p-7 lg:col-span-1 lg:col-start-1 lg:row-start-2">
+          <div className="col-span-4 col-start-1 row-span-1 row-start-2 flex items-end  p-4 text-2xl font-bold sm:col-span-2 sm:col-start-3 sm:row-start-1  sm:p-7 lg:col-span-1 lg:col-start-1 lg:row-start-2">
             {work.brand}
           </div>
           <div className="col-span-4 col-start-1 row-span-1 row-start-3 sm:col-span-2 sm:row-start-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -62,7 +62,7 @@ export default function Works() {
               <img src={`/images/works/${work.image}`} alt={work.title} />
             </a>
           </div>
-          <div className="col-span-4 col-start-1 row-span-1 row-start-4 flex flex-col gap-5 p-4 sm:col-span-2 sm:col-start-3 sm:row-start-2 sm:border-t sm:p-7 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1 lg:border-t-0">
+          <div className="col-span-4 col-start-1 row-span-1 row-start-4 flex flex-col gap-5 p-4 sm:col-span-2 sm:col-start-3 sm:row-start-2  sm:p-7 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1 ">
             <p className="grow">{work.description}</p>
             <a
               href="#"
@@ -73,6 +73,15 @@ export default function Works() {
           </div>
         </div>
       ))}
+
+      <div className="-mx-4 flex min-h-80 items-center justify-center bg-[var(--white)] px-4 py-8 sm:mx-0 sm:px-8 md:p-20">
+        <a
+          href="#"
+          className="text-xl font-medium uppercase underline hover:no-underline"
+        >
+          See all works {">>"}
+        </a>
+      </div>
     </section>
   );
 }
