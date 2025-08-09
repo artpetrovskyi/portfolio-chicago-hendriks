@@ -30,7 +30,7 @@ const WORKS = [
 
 export default function Works() {
   return (
-    <section className="container space-y-16">
+    <section id="portfolio" className="container space-y-16">
       <div>
         <SectionTopImage
           imgSrc={"/images/headings/works.svg"}
@@ -49,23 +49,30 @@ export default function Works() {
       {WORKS.map((work) => (
         <div
           key={work.title}
-          className="-mx-4 grid auto-rows-auto grid-cols-4 gap-[1px] [&>div]:bg-[var(--white)] text-[var(--black)] sm:mx-0"
+          className="-mx-4 grid auto-rows-auto grid-cols-4 gap-[1px] text-[var(--black)] sm:mx-0 [&>div]:bg-[var(--white)]"
         >
-          <div className="col-span-4 col-start-1 row-span-1 row-start-1 p-4 text-xl sm:col-span-2  sm:p-7 lg:col-span-1 ">
+          <div className="col-span-4 col-start-1 row-span-1 row-start-1 p-4 text-xl sm:col-span-2 sm:p-7 lg:col-span-1">
             {work.title}
           </div>
-          <div className="col-span-4 col-start-1 row-span-1 row-start-2 flex items-end  p-4 text-2xl font-bold sm:col-span-2 sm:col-start-3 sm:row-start-1  sm:p-7 lg:col-span-1 lg:col-start-1 lg:row-start-2">
+          <div className="col-span-4 col-start-1 row-span-1 row-start-2 flex items-end p-4 text-2xl font-bold sm:col-span-2 sm:col-start-3 sm:row-start-1 sm:p-7 lg:col-span-1 lg:col-start-1 lg:row-start-2">
             {work.brand}
           </div>
           <div className="col-span-4 col-start-1 row-span-1 row-start-3 sm:col-span-2 sm:row-start-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-            <a href="#" className="ibg block h-full pb-[100%]">
-              <img src={`/images/works/${work.image}`} alt={work.title} />
+            <a
+              href="#" onClick={(e) => e.preventDefault()}
+              className="ibg group block h-full overflow-hidden pb-[100%]"
+            >
+              <img
+                className="transition-transform duration-500 group-hover:scale-105"
+                src={`/images/works/${work.image}`}
+                alt={work.title}
+              />
             </a>
           </div>
-          <div className="col-span-4 col-start-1 row-span-1 row-start-4 flex flex-col gap-5 p-4 sm:col-span-2 sm:col-start-3 sm:row-start-2  sm:p-7 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1 ">
+          <div className="col-span-4 col-start-1 row-span-1 row-start-4 flex flex-col gap-5 p-4 sm:col-span-2 sm:col-start-3 sm:row-start-2 sm:p-7 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1">
             <p className="grow">{work.description}</p>
             <a
-              href="#"
+              href="#" onClick={(e) => e.preventDefault()}
               className="self-start font-medium uppercase underline hover:no-underline"
             >
               Learn more {">>"}
@@ -76,7 +83,7 @@ export default function Works() {
 
       <div className="-mx-4 flex min-h-80 items-center justify-center bg-[var(--white)] px-4 py-8 sm:mx-0 sm:px-8 md:p-20">
         <a
-          href="#"
+          href="#" onClick={(e) => e.preventDefault()}
           className="text-xl font-medium uppercase underline hover:no-underline"
         >
           See all works {">>"}

@@ -26,7 +26,7 @@ const STUDIES = [
 
 export default function About() {
   return (
-    <section className="container space-y-16">
+    <section id="about-me" className="container space-y-16">
       <div>
         <div>
           <SectionTopImage

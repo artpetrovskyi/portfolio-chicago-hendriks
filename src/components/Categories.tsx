@@ -18,7 +18,7 @@ export default function Categories() {
         {CATEGORIES.map((category) => (
           <li key={category.id}>
             <a
-              href="#"
+              href="#" onClick={(e) => e.preventDefault()}
               className="ibg group -mx-4 flex  sm:min-h-80 items-center justify-center overflow-hidden p-15 sm:mx-0"
             >
               <span className="absolute inset-0 z-1 bg-[var(--black)] opacity-50 transition-opacity duration-500 group-hover:opacity-30" />

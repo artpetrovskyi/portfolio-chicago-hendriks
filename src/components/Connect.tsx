@@ -24,7 +24,7 @@ const CONTACTS = [
 
 export default function Connect() {
   return (
-    <section className="container space-y-16">
+    <section id="connect" className="container space-y-16">
       <div>
         <SectionTopImage
           imgSrc={"/images/headings/connect.svg"}
@@ -45,14 +45,16 @@ export default function Connect() {
           <li key={name} className="h-full flex-[1_0_33.333%]">
             <a
               href={link}
-              className="flex flex-col items-center justify-center gap-5 bg-[var(--white)] p-8 lg:min-h-80"
+              className="flex flex-col items-center justify-center gap-5 bg-[var(--white)] p-8 lg:min-h-80 hover:opacity-90 transition-opacity duration-300"
             >
               <span
-                className="h-12 w-12 [&>svg]:block [&>svg]:h-full [&>svg]:w-full"
+                className="h-12 w-12 [&>svg]:block [&>svg]:h-full [&>svg]:w-full "
                 dangerouslySetInnerHTML={{ __html: icon }}
               ></span>
 
-              <span className="text-xl font-medium whitespace-nowrap">{title}</span>
+              <span className="text-xl font-medium whitespace-nowrap ">
+                {title}
+              </span>
             </a>
           </li>
         ))}
