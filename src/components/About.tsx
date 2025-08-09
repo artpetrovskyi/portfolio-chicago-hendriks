@@ -39,7 +39,13 @@ export default function About() {
 
         <div className="-mx-4 bg-[var(--white)] min-[860px]:flex sm:mx-0">
           <div className="ibg flex-[0_0_35%] pb-[80%] min-[860px]:pb-[40%]">
-            <img src="/images/avatar.jpg" alt="Chicago Hendriks" />
+            <img
+              src="/images/avatar.jpg"
+              alt="Chicago Hendriks"
+              loading="lazy"
+              width={437}
+              height={556}
+            />
           </div>
           <div className="space-y-4 px-4 py-8 text-xl sm:px-8 md:p-10 lg:p-20">
             <p>

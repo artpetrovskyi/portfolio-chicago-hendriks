@@ -59,20 +59,24 @@ export default function Works() {
           </div>
           <div className="col-span-4 col-start-1 row-span-1 row-start-3 sm:col-span-2 sm:row-start-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
             <a
-              href="#" onClick={(e) => e.preventDefault()}
-              className="ibg group block h-full overflow-hidden pb-[100%]"
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="ibg block h-full overflow-hidden bg-[var(--black)] pb-[100%]"
             >
               <img
-                className="transition-transform duration-500 group-hover:scale-105"
                 src={`/images/works/${work.image}`}
                 alt={work.title}
+                loading="lazy"
+                width={624}
+                height={624}
               />
             </a>
           </div>
           <div className="col-span-4 col-start-1 row-span-1 row-start-4 flex flex-col gap-5 p-4 sm:col-span-2 sm:col-start-3 sm:row-start-2 sm:p-7 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1">
             <p className="grow">{work.description}</p>
             <a
-              href="#" onClick={(e) => e.preventDefault()}
+              href="#"
+              onClick={(e) => e.preventDefault()}
               className="self-start font-medium uppercase underline hover:no-underline"
             >
               Learn more {">>"}
@@ -83,7 +87,8 @@ export default function Works() {
 
       <div className="-mx-4 flex min-h-80 items-center justify-center bg-[var(--white)] px-4 py-8 sm:mx-0 sm:px-8 md:p-20">
         <a
-          href="#" onClick={(e) => e.preventDefault()}
+          href="#"
+          onClick={(e) => e.preventDefault()}
           className="text-xl font-medium uppercase underline hover:no-underline"
         >
           See all works {">>"}
