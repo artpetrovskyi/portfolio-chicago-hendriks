@@ -29,7 +29,7 @@ export default function Connect() {
       <div>
         <Reveal>
           <SectionTopImage
-            imgSrc={"/images/headings/connect.svg"}
+            imgSrc={import.meta.env.VITE_API_URL + "/images/headings/connect.svg"}
             imgAlt="Connect"
             imgWidth={790}
             imgHeight={260}

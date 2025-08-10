@@ -27,7 +27,7 @@ export default function Categories() {
               >
                 <span className="absolute inset-0 z-1 bg-[var(--black)] opacity-50 transition-opacity duration-500 group-hover:opacity-30" />
                 <img
-                  src={`/images/categories/${category.image}`}
+                  src={import.meta.env.VITE_API_URL + `/images/categories/${category.image}`}
                   alt={category.title}
                   className="transition-transform duration-500 group-hover:scale-105"
                 />

@@ -31,8 +31,8 @@ export default function About() {
       <div>
         <Reveal>
           <SectionTopImage
-            imgSrc={"/images/headings/about-me.svg"}
-            imgAlt="About Me"
+            imgSrc={import.meta.env.VITE_API_URL + "/images/headings/about-me.svg"}
+            imgAlt="Chicago Hendriks"
             imgWidth={884}
             imgHeight={260}
           />
@@ -42,7 +42,7 @@ export default function About() {
           <div className="-mx-4 bg-[var(--white)] min-[860px]:flex sm:mx-0">
             <div className="ibg flex-[0_0_35%] pb-[80%] min-[860px]:pb-[40%]">
               <img
-                src="/images/avatar.jpg"
+                src={import.meta.env.VITE_API_URL + "/images/avatar.jpg"}
                 alt="Chicago Hendriks"
                 loading="lazy"
                 width={437}

@@ -11,7 +11,7 @@ export default function Footer() {
         }}
         className="flex-[0_0_70px]"
       >
-        <img src="/logo.svg" alt="logotype" />
+        <img src={import.meta.env.VITE_API_URL + "logo.svg"} alt="logotype" />
       </a>
     </footer>
   );

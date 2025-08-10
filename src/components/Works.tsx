@@ -35,7 +35,7 @@ export default function Works() {
       <div>
         <Reveal>
           <SectionTopImage
-            imgSrc={"/images/headings/works.svg"}
+            imgSrc={import.meta.env.VITE_API_URL + "/images/headings/works.svg"}
             imgAlt="Works"
             imgWidth={668}
             imgHeight={261}
@@ -67,7 +67,7 @@ export default function Works() {
                 className="ibg block h-full overflow-hidden bg-[var(--black)] pb-[100%]"
               >
                 <img
-                  src={`/images/works/${work.image}`}
+                  src={import.meta.env.VITE_API_URL + `/images/works/${work.image}`}
                   alt={work.title}
                   loading="lazy"
                   width={624}

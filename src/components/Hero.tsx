@@ -25,7 +25,7 @@ export default function Hero() {
         <Reveal>
           <SectionTopImage
             tag="h2"
-            imgSrc={"/images/headings/chicago-hendriks.svg"}
+            imgSrc={import.meta.env.VITE_API_URL + "/images/headings/chicago-hendriks.svg"}
             imgAlt="Chicago Hendriks"
             imgWidth={1005}
             imgHeight={511}

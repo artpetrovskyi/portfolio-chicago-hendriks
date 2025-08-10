@@ -19,7 +19,7 @@ export default function Clients() {
       <div>
         <Reveal>
           <SectionTopImage
-            imgSrc={"/images/headings/clients.svg"}
+            imgSrc={import.meta.env.VITE_API_URL + "/images/headings/clients.svg"}
             imgAlt="Clients"
             imgWidth={697}
             imgHeight={261}
@@ -42,7 +42,7 @@ export default function Clients() {
             <Reveal full>
               <div className="flex items-center justify-center bg-[var(--white)] p-8 lg:min-h-80">
                 <img
-                  src={`/images/clients/${logo}`}
+                  src={import.meta.env.VITE_API_URL + `/images/clients/${logo}`}
                   alt={name}
                   loading="lazy"
                   title={name}
