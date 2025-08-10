@@ -1,5 +1,6 @@
 import SectionTopText from "./SectionTopText";
 import SectionTopImage from "./SectionTopImage";
+import Reveal from "./Reveal";
 
 const CONTACTS = [
   {
@@ -26,36 +27,42 @@ export default function Connect() {
   return (
     <section id="connect" className="container space-y-16">
       <div>
-        <SectionTopImage
-          imgSrc={"/images/headings/connect.svg"}
-          imgAlt="Connect"
-          imgWidth={790}
-          imgHeight={260}
-        />
+        <Reveal>
+          <SectionTopImage
+            imgSrc={"/images/headings/connect.svg"}
+            imgAlt="Connect"
+            imgWidth={790}
+            imgHeight={260}
+          />
+        </Reveal>
 
-        <SectionTopText>
-          If you have an idea that needs to be brought to life through stylish
-          and functional design, I’d be happy to collaborate. Feel free to reach
-          out — let’s talk!
-        </SectionTopText>
+        <Reveal full>
+          <SectionTopText>
+            If you have an idea that needs to be brought to life through stylish
+            and functional design, I’d be happy to collaborate. Feel free to
+            reach out — let’s talk!
+          </SectionTopText>
+        </Reveal>
       </div>
 
       <ul className="-mx-4 flex flex-wrap gap-[1px] sm:mx-0 sm:flex-row lg:flex-nowrap">
         {CONTACTS.map(({ name, icon, link, title }) => (
           <li key={name} className="h-full flex-[1_0_33.333%]">
-            <a
-              href={link}
-              className="flex flex-col items-center justify-center gap-5 bg-[var(--white)] p-8 lg:min-h-80 hover:opacity-90 transition-opacity duration-300"
-            >
-              <span
-                className="h-12 w-12 [&>svg]:block [&>svg]:h-full [&>svg]:w-full "
-                dangerouslySetInnerHTML={{ __html: icon }}
-              ></span>
+            <Reveal full>
+              <a
+                href={link}
+                className="flex flex-col items-center justify-center gap-5 bg-[var(--white)] p-8 transition-opacity duration-300 hover:opacity-90 lg:min-h-80"
+              >
+                <span
+                  className="h-12 w-12 [&>svg]:block [&>svg]:h-full [&>svg]:w-full"
+                  dangerouslySetInnerHTML={{ __html: icon }}
+                ></span>
 
-              <span className="text-xl font-medium whitespace-nowrap ">
-                {title}
-              </span>
-            </a>
+                <span className="text-xl font-medium whitespace-nowrap">
+                  {title}
+                </span>
+              </a>
+            </Reveal>
           </li>
         ))}
       </ul>

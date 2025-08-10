@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { motion } from "motion/react";
 
 const NAV_LINKS = [
   {
@@ -17,8 +18,13 @@ const NAV_LINKS = [
 
 export default function Header() {
   return (
-    <header className="absolute top-0 left-0 z-10 w-full bg-[var(--black)]">
-      <div className="container flex flex-col items-center justify-between gap-5 py-10 sm:flex-row">
+    <header className="absolute top-0 left-0 z-20 w-full bg-[var(--black)]">
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="container flex flex-col items-center justify-between gap-5 py-10 sm:flex-row"
+      >
         <a href="/" className="flex-[0_0_70px]">
           <img src="/logo.svg" alt="logotype" />
         </a>
@@ -49,7 +55,7 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-      </div>
+      </motion.div>
     </header>
   );
 }

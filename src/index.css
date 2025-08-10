@@ -4,6 +4,8 @@
 :root {
   --black: oklch(0.145 0 0); /* Very dark gray (#252525) */
   --white: oklch(0.985 0 0); /* Almost white (#FAFAFA) */
+  --accent: oklch(39.6% .141 25.723); /* --color-red-900 */
+  --accent2: #FB2C36 /* Red */
 }
 
 @layer base {

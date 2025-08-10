@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="relative z-1 mb-80 bg-[var(--black)]">
+      <main className="relative z-10 mb-80 bg-[var(--black)]">
         <Hero />
         <div className="space-y-60">
           <Categories />

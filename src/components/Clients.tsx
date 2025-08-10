@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 import SectionTopImage from "./SectionTopImage";
 import SectionTopText from "./SectionTopText";
 
@@ -16,35 +17,40 @@ export default function Clients() {
   return (
     <section className="container space-y-16">
       <div>
-        <SectionTopImage
-          imgSrc={"/images/headings/clients.svg"}
-          imgAlt="Clients"
-          imgWidth={697}
-          imgHeight={261}
-        />
+        <Reveal>
+          <SectionTopImage
+            imgSrc={"/images/headings/clients.svg"}
+            imgAlt="Clients"
+            imgWidth={697}
+            imgHeight={261}
+          />
+        </Reveal>
 
-        <SectionTopText>
-          I’m proud to collaborate with companies across various industries. My
-          clients include startups, small and medium-sized businesses, as well
-          as established brands that value thoughtful design and attention to
-          detail.
-        </SectionTopText>
+        <Reveal full>
+          <SectionTopText>
+            I’m proud to collaborate with companies across various industries.
+            My clients include startups, small and medium-sized businesses, as
+            well as established brands that value thoughtful design and
+            attention to detail.
+          </SectionTopText>
+        </Reveal>
       </div>
 
       <ul className="-mx-4 grid grid-cols-2 gap-[1px] sm:mx-0 sm:grid-cols-4">
         {CLIENTS.map(({ name, logo }) => (
-          <li
-            key={name}
-            className="flex items-center justify-center bg-[var(--white)] p-8 lg:min-h-80"
-          >
-            <img
-              src={`/images/clients/${logo}`}
-              alt={name}
-              loading="lazy"
-              title={name}
-              width={180}
-              height={180}
-            />
+          <li key={name} className="[&_*]:h-full">
+            <Reveal full>
+              <div className="flex items-center justify-center bg-[var(--white)] p-8 lg:min-h-80">
+                <img
+                  src={`/images/clients/${logo}`}
+                  alt={name}
+                  loading="lazy"
+                  title={name}
+                  width={180}
+                  height={180}
+                />
+              </div>
+            </Reveal>
           </li>
         ))}
       </ul>
